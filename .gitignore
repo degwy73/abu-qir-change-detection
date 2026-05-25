@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+outputs/geotiffs/*.tif
+outputs/geotiffs/*.aux.xml
+outputs/maps/landsat_ndvi_*.png
+outputs/maps/landsat_mndwi_*.png
+outputs/maps/landsat_builtup_*.png
+outputs/maps/landsat_rgb_19*.png
+outputs/maps/s2_builtup_*.png
