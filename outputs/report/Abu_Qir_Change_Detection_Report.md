@@ -120,21 +120,7 @@ Red = NDBI increase (urbanisation); green = NDBI decrease.
 
 ---
 
-## 4. Sentinel-2 High-Resolution View
-
-| Period | Built-up (km²) | Water (km²) | NDVI |
-|---|---|---|---|
-| 2018 | 15.67 | 138.89 | -0.033 |
-| 2021 | 17.21 | 136.80 | -0.072 |
-| 2024 | 16.22 | 129.55 | -0.067 |
-
-
-![S2 2024 RGB](../maps/s2_rgb_2024.png)
-![S2 2024 built-up (Dynamic World)](../maps/s2_builtup_2024.png)
-
----
-
-## 5. Interpretation
+## 4. Interpretation
 
 The data tells a consistent story of intensive coastal urbanisation
 on the western edge of Abu Qir Bay. The bulk of the new built-up area
@@ -149,7 +135,7 @@ mechanical, not climatic.
 
 ---
 
-## 6. Reproducibility
+## 5. Reproducibility
 
 All inputs are open public archives; all code is in this repository.
 GeoTIFF outputs (per period, per index, plus the change-class raster)
@@ -162,7 +148,7 @@ were exported to Google Drive folder `AbuQir_ChangeDetection_Exports`.
 
 ---
 
-## 7. Limitations
+## 6. Limitations
 
 1. Pre-2015 built-up classification uses an unsupervised threshold
    rule rather than a trained classifier. Class boundaries are

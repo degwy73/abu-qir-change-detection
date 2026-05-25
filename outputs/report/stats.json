@@ -73,30 +73,5 @@
       "ndbi_mean": 0.2276
     }
   ],
-  "sentinel2": [
-    {
-      "period": "2018",
-      "start": "2018-01-01",
-      "end": "2018-12-31",
-      "builtup_km2": 15.669,
-      "water_km2": 138.888,
-      "ndvi_mean": -0.0332
-    },
-    {
-      "period": "2021",
-      "start": "2021-01-01",
-      "end": "2021-12-31",
-      "builtup_km2": 17.211,
-      "water_km2": 136.797,
-      "ndvi_mean": -0.0718
-    },
-    {
-      "period": "2024",
-      "start": "2024-01-01",
-      "end": "2024-12-31",
-      "builtup_km2": 16.223,
-      "water_km2": 129.547,
-      "ndvi_mean": -0.0665
-    }
-  ]
+  "sentinel2": []
 }

@@ -48,11 +48,11 @@ LANDSAT_PERIODS = [
     ("2024", "2024-01-01", "2025-12-31"),
 ]
 
-SENTINEL2_PERIODS = [
-    ("2018", "2018-01-01", "2018-12-31"),
-    ("2021", "2021-01-01", "2021-12-31"),
-    ("2024", "2024-01-01", "2024-12-31"),
-]
+# Sentinel-2 disabled — Landsat alone provides the headline result and the
+# S2 visualization params required separate tuning that wasn't worth the
+# marginal value-add. Re-enable here if you want a higher-resolution
+# snapshot for recent years.
+SENTINEL2_PERIODS = []
 
 # -------------------------------------------------------------------
 # CLOUD MASKING
@@ -97,8 +97,8 @@ MAX_PIXELS = 1e10
 # -------------------------------------------------------------------
 RGB_VIS_LANDSAT = {
     "bands": ["SR_B4", "SR_B3", "SR_B2"],
-    "min": 7000,
-    "max": 18000,
+    "min": 0.02,
+    "max": 0.30,
     "gamma": 1.2,
 }
 RGB_VIS_S2 = {

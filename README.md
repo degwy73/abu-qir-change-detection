@@ -1,9 +1,9 @@
 # Multi-Decadal Change Detection — New Abu Qir, Alexandria
 
-Multi-sensor, multi-decadal satellite change detection of the New Abu Qir
-coastline on the Mediterranean shore of Alexandria, Egypt. Built entirely on
-Google Earth Engine using Landsat 5/7/8/9, Sentinel-2, and Google's Dynamic
-World land-cover product. End-to-end reproducible in Python.
+Multi-decadal satellite change detection of the New Abu Qir coastline on the
+Mediterranean shore of Alexandria, Egypt. Built entirely on Google Earth
+Engine using harmonised Landsat 5/7/8/9 surface reflectance plus Google's
+Dynamic World land-cover product. End-to-end reproducible in Python.
 
 ![Built-up area time-series](outputs/charts/builtup_timeseries.png)
 
@@ -31,7 +31,7 @@ in open water from reclamation.
 ## What the Repository Contains
 
 - **End-to-end Python pipeline** for Google Earth Engine
-- **Multi-sensor harmonization** across Landsat 5/7/8/9 + Sentinel-2
+- **Multi-sensor harmonization** across Landsat 5 / 7 / 8 / 9
 - **Five spectral indices**: NDVI, NDBI, MNDWI, NDWI, BSI
 - **Built-up classification** using Dynamic World (post-2015) and a
   transparent NDBI/NDVI/MNDWI threshold rule for the pre-Dynamic-World era

@@ -294,16 +294,7 @@ Red = NDBI increase (urbanisation); green = NDBI decrease.
 
 ---
 
-## 4. Sentinel-2 High-Resolution View
-
-{s2_table}
-
-![S2 2024 RGB](../maps/s2_rgb_2024.png)
-![S2 2024 built-up (Dynamic World)](../maps/s2_builtup_2024.png)
-
----
-
-## 5. Interpretation
+## 4. Interpretation
 
 The data tells a consistent story of intensive coastal urbanisation
 on the western edge of Abu Qir Bay. The bulk of the new built-up area
@@ -318,7 +309,7 @@ mechanical, not climatic.
 
 ---
 
-## 6. Reproducibility
+## 5. Reproducibility
 
 All inputs are open public archives; all code is in this repository.
 GeoTIFF outputs (per period, per index, plus the change-class raster)
@@ -331,7 +322,7 @@ were exported to Google Drive folder `{drive_folder}`.
 
 ---
 
-## 7. Limitations
+## 6. Limitations
 
 1. Pre-2015 built-up classification uses an unsupervised threshold
    rule rather than a trained classifier. Class boundaries are
@@ -373,14 +364,6 @@ def build_report(stats: dict) -> Path:
             f"{row['water_km2']:.2f} | "
             f"{row['ndvi_mean']:.3f} | {row['ndbi_mean']:.3f} |\n")
 
-    s2_table = "| Period | Built-up (km²) | Water (km²) | NDVI |\n"
-    s2_table += "|---|---|---|---|\n"
-    for row in s:
-        s2_table += (
-            f"| {row['period']} | {row['builtup_km2']:.2f} | "
-            f"{row['water_km2']:.2f} | "
-            f"{row['ndvi_mean']:.3f} |\n")
-
     transition_year = (
         int(first["period"]) + (int(last["period"]) - int(first["period"])) // 2)
 
@@ -398,7 +381,6 @@ def build_report(stats: dict) -> Path:
         first_ndbi=first["ndbi_mean"], last_ndbi=last["ndbi_mean"],
         mndwi_threshold=config.MNDWI_WATER_THRESHOLD,
         landsat_table=landsat_table,
-        s2_table=s2_table,
         transition_year=transition_year,
         drive_folder=config.DRIVE_FOLDER,
     )
